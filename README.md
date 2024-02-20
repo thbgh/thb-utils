@@ -6,7 +6,7 @@
 
 ```shell
 // pnpm@8
-pnpm install @thb/utils
+pnpm install @thbnpm/utils
 ```
 
 # 命令

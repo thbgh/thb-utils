@@ -1,6 +1,6 @@
 {
   "name": "@thbnpm/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "utils 函数库, 封装一些常用的工具函数。",
   "main": "lib/main.umd.js",
   "module": "lib/main.esm.js",
@@ -40,6 +40,6 @@
   "repository": "https://github.com/thbgh/thb-utils.git",
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   }
 }
