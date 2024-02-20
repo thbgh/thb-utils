@@ -20,8 +20,9 @@ jobs:
         with:
           node-version: 16.x
       - name: install pnpm
-        run: npm install -g pnpm@8
-        run: pnpm install && pnpm build
+        run: |
+          npm install -g pnpm@8
+          pnpm install && pnpm build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
