@@ -1,27 +1,27 @@
-# 显示的workflow名称
-name: GitHub Actions deploy github-pages
+# use this action(https://github.com/JamesIves/github-pages-deploy-action)
+
+name: page Build and Deploy
 on:
-  # 推送到master分支开始打包
   push:
     branches:
       - main
+permissions:
+  contents: write # Workflow permissions. permissions granted to the GITHUB_TOKEN when running workflows in this repository
 
 jobs:
-  # 开始打包
-  Build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
-        # 迁出触发的流程的版本 能让下面的工作流程访问
-        uses: actions/checkout@v2
-        # setup-node 可以提供node环境，指定node版本以及 npm /yarn缓存
-      - name: actions/setup-node@v2
-        uses: actions/setup-node@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
         with:
-          node: 16.14
+          node-version: 16.x
       - name: install pnpm
         run: npm install -g pnpm@8
-      - run: pnpm install && pnpm build
+        run: pnpm install && pnpm build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
