@@ -22,3 +22,9 @@ jobs:
       - name: install pnpm
         run: npm install -g pnpm@8
       - run: pnpm install && pnpm build
+      # 新增 deploy
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: docs # build后文件目录
