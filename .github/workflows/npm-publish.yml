@@ -29,7 +29,9 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: docs # The folder the action should deploy.
           clean: true
-      - name: Publish to GitHub Package
-        run: npm publish --registry=https://npm.pkg.github.com/
+      - name: Log in to GitHub Package Registry
+        run: npm login --registry=https://npm.pkg.github.com/ --scope=@thbnpm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to GitHub Package
+        run: npm publish --registry=https://npm.pkg.github.com/
