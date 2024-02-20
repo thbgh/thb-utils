@@ -1,6 +1,6 @@
 # thb-utils 简易函数库
 
-文档地址 [thb-utils 文档](https://thb.github.io/thb-utils/)
+文档地址 [thb-utils 文档](https://thbgh.github.io/thb-utils/)
 
 # 安装使用
 
