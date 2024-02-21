@@ -28,7 +28,7 @@ pnpm run build
 pnpm run doc
 
 // 测试
-pnpm run doc
+pnpm run test
 ```
 
 # 发布
